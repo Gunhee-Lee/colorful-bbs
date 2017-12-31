@@ -1,12 +1,9 @@
 #include <ncurses.h>
 
-int main()
+int printMainMenu()
 {
-	initscr();
 	printw("Colorful BBS Main Menu");
 	refresh();
-	getch();
-	endwin();
 
 	return 0;
 }

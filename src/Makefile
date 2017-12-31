@@ -1,8 +1,14 @@
 CC=g++
-CFLAGS=-lncurses -Wall
+CFLAGS=-lncurses -Wall -g
+ccsrc=$(wildcard *.cc) \
+      $(wildcard controller/*.cc) \
+      $(wildcard model/*.cc) \
+      $(wildcard view/*.cc)
+obj=$(ccsrc:.cc=.o)
 
-cbbs : main_menu.o 
-	$(CC) -o cbbs main_menu.o $(CFLAGS)
+cbbs: $(obj)
+	$(CC) -o $@ $^ $(CFLAGS)
 
-main_menu.o : main_menu.cc
-	$(CC) -c main_menu.cc 
+.PHONY: clean
+clean:
+	rm $(obj) cbbs
