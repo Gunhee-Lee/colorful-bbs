@@ -11,4 +11,6 @@ Controller::mainMenu()
 		printMainMenu();
 		input = getch();
 	}
+
+	return 0;
 }

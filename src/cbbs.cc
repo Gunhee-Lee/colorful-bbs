@@ -1,5 +1,8 @@
 #include <ncurses.h>
 #include "controller/Controller.h"
+#include <json.hpp>
+
+using json = nlohmann::json;
 
 int main()
 {
@@ -11,5 +14,7 @@ int main()
 	ctlr.mainMenu();
 
 	endwin();
+
+	json jtest;
 }
 
