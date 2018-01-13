@@ -7,6 +7,7 @@ using json = nlohmann::json;
 int main()
 {
 	initscr();
+	start_color();
 	printw("Initializing...");
 	refresh();
 
